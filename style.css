@@ -1,0 +1,170 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+body::before, body::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    opacity: 0.18;
+    pointer-events: none;
+    animation: float 12s ease-in-out infinite;
+}
+body::before {
+    width: 420px;
+    height: 420px;
+    background: #a1c4fd;
+    top: -120px;
+    left: -120px;
+    animation-delay: 0s;
+}
+body::after {
+    width: 320px;
+    height: 320px;
+    background: #c2e9fb;
+    bottom: -100px;
+    right: -100px;
+    animation-delay: 6s;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(30px) scale(1.05); }
+}
+.container {
+    position: relative;
+    z-index: 1;
+    background: none;
+    margin-top: 60px;
+    padding: 0;
+    min-width: 320px;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    width: 100%;
+    justify-content: center;
+}
+.weather-section {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07), 0 1.5px 4px rgba(0,0,0,0.03);
+    padding: 32px 24px 24px 24px;
+    min-width: 320px;
+    max-width: 370px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weather-info {
+    background: #f6f8fa;
+    border-radius: 8px;
+    padding: 16px 12px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 1px 4px rgba(34,34,59,0.04);
+    color: #22223b;
+    text-align: center;
+    font-size: 1.08rem;
+}
+.weather-info p {
+    margin: 6px 0;
+}
+.logout-link {
+    align-self: flex-end;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+@media (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+    .weather-section {
+        max-width: 95vw;
+        min-width: 0;
+    }
+}
+
+h2, h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-weight: 600;
+    color: #22223b;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background: #f9f9f9;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+input[type="text"]:focus, input[type="password"]:focus {
+    border: 1.5px solid #4f8cff;
+    outline: none;
+    background: #fff;
+}
+
+button {
+    padding: 10px 0;
+    background: linear-gradient(90deg, #4f8cff 0%, #38b6ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(79,140,255,0.08);
+}
+button:hover {
+    background: linear-gradient(90deg, #38b6ff 0%, #4f8cff 100%);
+    box-shadow: 0 2px 8px rgba(79,140,255,0.13);
+}
+
+a {
+    color: #4f8cff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #22223b;
+    text-decoration: underline;
+}
+
+@media (max-width: 400px) {
+    .container {
+        min-width: 90vw;
+        padding: 18px 4vw;
+    }
+} 
