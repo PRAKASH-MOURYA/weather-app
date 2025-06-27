@@ -36,7 +36,7 @@ Add your API key to the PHP file:
 php
 Copy
 Edit
-$apiKey = "YOUR_API_KEY_HERE";
+$apiKey = "541fd2708b7f3ea51100552776d46447";
 Open the app in your browser:
 
 arduino
