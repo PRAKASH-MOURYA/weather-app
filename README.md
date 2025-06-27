@@ -53,9 +53,7 @@ The API returns the current weather details.
 The data is parsed and displayed in a styled layout using CSS.
 
 📁 File Structure
-bash
-Copy
-Edit
+
 weather-app/
 ├── index.php         # Main frontend and backend logic
 ├── style.css         # Custom styles
